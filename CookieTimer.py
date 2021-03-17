@@ -7,6 +7,11 @@ import numpy as np
 # import our Random class from python/Random.py file
 sys.path.append(".")
 from Random import Random
+import random as random1
+
+
+
+
 
 # main function for our coin toss Python code
 if __name__ == "__main__":
@@ -64,15 +69,9 @@ if __name__ == "__main__":
         outfile.write(str(rate)+" \n")
         for e in range(0,Nexp):
             for t in range(0,Nmeas):
-                outfile.write(str(random.Exponential(rate))+" ")
+                rate1 = random.Exponential(rate)
+                print(rate1)
+                outfile.write(str(random.Bernoulli(rate1))+" ")
+
             outfile.write(" \n")
-        outfile.close()
-    else:
-        print(rate)
-        for e in range(0,Nexp):
-            for t in range(0,Nmeas):
-                print(random.Exponential(rate), end=' ')
-            print(" ")
-   
-
-
+        outfile.close()    

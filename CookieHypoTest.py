@@ -1,4 +1,4 @@
-mports of external packages to use in our code
+#imports of external packages to use in our code
 import sys
 import math
 import numpy as np
@@ -152,8 +152,8 @@ if __name__ == "__main__":
     plt.figure()
     ax = plt.axes()
 
-    plt.hist(array0,100,density=True, color='r',alpha=0.5,label='$P(\lambda | Input0)$')
-    plt.hist(array1, 100, density=True, color='b', alpha=0.5,label='$P(\lambda | Input1)$')
+    plt.hist(array0,10,density=True, color='r',alpha=0.5,label='$P(\lambda | Input0)$')
+    plt.hist(array1, 10, density=True, color='b', alpha=0.5,label='$P(\lambda | Input1)$')
         
     lambda_crit = LLR[0][min(int((1-alpha)*N0), N0-1)]
     first_leftover = np.where( LLR[1] > lambda_crit )[0][0]
