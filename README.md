@@ -2,7 +2,7 @@
 
 ## Project Description
 
-This project, we will solve Poisson’s Equation in 2-D. 
+
 
 ## This repository contains several types of programs:
 
