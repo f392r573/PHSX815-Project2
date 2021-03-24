@@ -3,11 +3,13 @@
 # imports of external packages to use in our code
 import sys
 import numpy as np
+import pandas as pd
 
 # import our Random class from python/Random.py file
 sys.path.append(".")
 from Random import Random
 import random as random1
+from numpy.random import beta, poisson, gamma, normal,rayleigh
 
 
 
@@ -69,9 +71,13 @@ if __name__ == "__main__":
         outfile.write(str(rate)+" \n")
         for e in range(0,Nexp):
             for t in range(0,Nmeas):
-                rate1 = random.Exponential(rate)
-                print(rate1)
-                outfile.write(str(random.Bernoulli(rate1))+" ")
+                #a = random1.uniform(0.2,rate)
+                #a = beta(0.8,rate)
+                a = beta (0.8,rate)
+                print(a)
+                #b = random1.uniform(0.3,rate)
+                #print(rate1)
+                outfile.write(str(rayleigh(a))+" ")
 
             outfile.write(" \n")
         outfile.close()    
