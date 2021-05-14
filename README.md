@@ -1,9 +1,9 @@
 ## PHSX815-Project2
 
 ## Requirements:
--numpy 
--scipy 
--matplotlib
+- numpy 
+- scipy 
+- matplotlib
 
 
 ## Code Usage
